@@ -1,155 +1,219 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ECHO Proposal Quality‑Assurance Checklist - Myanmar HIP 2026</title>
-  <style>
-body { font-family: Arial, sans-serif; margin: 2rem; color: #1f2937; }
-h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
-p.intro { color: #374151; }
-section { margin-top: 1.5rem; }
-h2 { font-size: 1.2rem; margin-bottom: 0.25rem; color: #0f172a; }
-ul { list-style: none; padding-left: 0; }
-li { margin: 0.4rem 0; }
-label { line-height: 1.4; }
-.container { max-width: 900px; margin: 0 auto; }
-.toolbar { display: flex; gap: 0.5rem; margin: 1rem 0; }
-button { background: #2563eb; color: white; border: none; padding: 0.5rem 0.75rem; border-radius: 6px; cursor: pointer; }
-button.secondary { background: #6b7280; }
-.progress { background: #e5e7eb; height: 10px; border-radius: 6px; overflow: hidden; }
-.progress > div { background: #16a34a; height: 100%; width: 0; transition: width 0.2s ease; }
-.progress-text { font-size: 0.9rem; margin-top: 0.25rem; color: #374151; }
-footer { margin-top: 2rem; font-size: 0.85rem; color: #6b7280; }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ECHO Proposal Quality‑Assurance Checklist — Myanmar HIP 2026</title0.2rem 0; }  <title>ECHO Proposal Quality‑Assurance Checklist — Myanmar HIP 2026</title>
+    .actions { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .5rem; }
+    button {
+      background: var(--accent); border: none; color: #0b1220; font-weight: 600;
+      padding: .5rem .75rem; border-radius: .5rem; cursor: pointer;
+    }
+    button.secondary { background: var(--border); color: var(--text); }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: .75rem; padding: 1rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    li { display: flex; align-items: flex-start; gap: .6rem; padding: .4rem 0; border-bottom: 1px dashed var(--border); }
+    li:last-child { border-bottom: none; }
+    label { cursor: pointer; line-height: 1.35; }
+    input[type="checkbox"] {
+      width: 1.1rem; height: 1.1rem; margin-top: .15rem; cursor: pointer;
+      accent-color: var(--accent-2);
+    }
+
+    /* Progress bar */
+    .progress-wrap { margin: 1rem 0 1.25rem; }
+    .progress-label { display: flex; justify-content: space-between; font-size: .95rem; color: var(--muted); }
+    .progress {
+      height: .75rem; background: #0b1220; border: 1px solid var(--border);
+      border-radius: 999px; overflow: hidden; margin-top: .4rem;
+    }
+    .progress > .bar { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transition: width .25s ease; }
+
+    footer { margin-top: 2rem; font-size: .85rem; color: var(--muted); }
+    .section { margin-top: .25rem; }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>ECHO Proposal Quality‑Assurance Checklist - Myanmar HIP 2026</h1>
-    <p class="intro">Use this checklist to quality‑assure proposals before submission to DG ECHO. It integrates rejection reasons shared and the Myanmar‑specific provisions of the 2026 HIP and Technical Annex.</p>
-    <div class="toolbar">
-      <button onclick="printChecklist()">Print</button>
-      <button class="secondary" onclick="resetChecklist()">Reset</button>
-    </div>
-    <div class="progress"><div id="progress-bar"></div></div>
-    <div id="progress-text" class="progress-text"></div>
-    <section>
-<h2>A. Needs Assessment & Evidence Base</h2>
-<ul>
-<li><label><input type="checkbox" class="chk"> Is the needs assessment comprehensive, contextualized, recent, and disaggregated (quantitative and qualitative)?</label></li>
-<li><label><input type="checkbox" class="chk"> Is the analysis specific to the proposed geographic area and population groups (not generic), and does it directly justify the action?</label></li>
-<li><label><input type="checkbox" class="chk"> Are vulnerabilities and target groups evidenced with sources and dates, and aligned to the most acute needs?</label></li>
-<li><label><input type="checkbox" class="chk"> Is humanitarian advocacy grounded in coordinated, evidence‑based analysis?</label></li>
-<li><label><input type="checkbox" class="chk"> Where feasible/safe, is there consultation or coordination with relevant authorities; if not, is a clear justification provided?</label></li>
-</ul>
-</section><section>
-<h2>B. Response Analysis & Strategy</h2>
-<ul>
-<li><label><input type="checkbox" class="chk"> Is there a coherent, detailed implementation strategy (methodology, sequencing, delivery mechanisms, targeting, monitoring)?</label></li>
-<li><label><input type="checkbox" class="chk"> Is the response logic fully aligned with the logical framework (results, outputs, indicators, assumptions)?</label></li>
-<li><label><input type="checkbox" class="chk"> Are operational/protection/access/contextual risks clearly analyzed with concrete mitigation measures?</label></li>
-<li><label><input type="checkbox" class="chk"> If working through community/camp management committees or local structures, are risks (e.g., exclusion, elite capture) and mitigations explicit?</label></li>
-<li><label><input type="checkbox" class="chk"> Are conflict‑sensitivity and Do No Harm considerations integrated and tracked?</label></li>
-</ul>
-</section><section>
-<h2>C. Alignment With ECHO Policies & Myanmar HIP 2026</h2>
-<ul>
-<li><label><input type="checkbox" class="chk"> Does the intervention focus on life‑saving multi‑sector assistance for IDPs, conflict‑affected and disaster‑affected populations (incl. hard‑to‑reach areas)?</label></li>
-<li><label><input type="checkbox" class="chk"> Are sector choices aligned with Myanmar HIP 2026 priorities: protection (incl. mine action/IHL dissemination/GBV/CAAC/PSS), food/basic needs, health and nutrition, shelter/NFIs, WASH, emergency multi‑sector assistance, and EiE (return to learning via temporary opportunities)?</label></li>
-<li><label><input type="checkbox" class="chk"> Is localisation a core feature (fair partnerships, capacity strengthening, risk sharing, adequate share of overheads to local partners)?</label></li>
-<li><label><input type="checkbox" class="chk"> Is there coordination and clear complementarity with FLER/emergency mechanisms, and cluster/Area of Responsibility reporting?</label></li>
-<li><label><input type="checkbox" class="chk"> Are Minimum Environmental Requirements (MER) applied across sectors, including WASH and Shelter & Settlements designs?</label></li>
-<li><label><input type="checkbox" class="chk"> Is the proposal free of standalone DP components in Myanmar (2026 targeted DP budget is not allocated to Myanmar) while mainstreaming preparedness where relevant?</label></li>
-<li><label><input type="checkbox" class="chk"> Does the proposal operationalise the Nexus where appropriate without diluting the life‑saving focus?</label></li>
-</ul>
-</section><section>
-<h2>D. Proposal Structure, Detail & Internal Coherence</h2>
-<ul>
-<li><label><input type="checkbox" class="chk"> Is the proposal well‑structured and complete (Single Form sections fully detailed, no vague descriptions)?</label></li>
-<li><label><input type="checkbox" class="chk"> Are activities, logframe elements, and budget internally consistent across all sections?</label></li>
-<li><label><input type="checkbox" class="chk"> Are indicators SMART, time‑bound, and aligned with DG ECHO Key Result Indicators (KRIs) where applicable (avoid custom if a KRI exists)?</label></li>
-<li><label><input type="checkbox" class="chk"> Is the DG ECHO Protection Mainstreaming KOI (PMKOI) applied across sectors, and a Protection outcome indicator included for protection actions?</label></li>
-<li><label><input type="checkbox" class="chk"> Are abbreviations, methodologies, and technical concepts clearly explained?</label></li>
-</ul>
-</section><section>
-<h2>E. Results Framework Quality</h2>
-<ul>
-<li><label><input type="checkbox" class="chk"> Are intended results clearly defined, realistic, and derived from the needs assessment?</label></li>
-<li><label><input type="checkbox" class="chk"> Is the methodological approach sufficiently detailed (steps, tools, sequencing, delivery mechanisms) for each result area?</label></li>
-<li><label><input type="checkbox" class="chk"> Are activities described with enough operational detail to understand how they will be implemented?</label></li>
-<li><label><input type="checkbox" class="chk"> Is there a clear articulation of causal pathways from activities to outputs and outcomes?</label></li>
-<li><label><input type="checkbox" class="chk"> Do planned activities include tangible service delivery, not predominantly assessments/trainings/capacity building?</label></li>
-<li><label><input type="checkbox" class="chk"> Is the balance between capacity‑building and direct assistance appropriate for a humanitarian action?</label></li>
-<li><label><input type="checkbox" class="chk"> Do the result areas logically support each other and contribute to a coherent intervention strategy (explicit linkages)?</label></li>
-<li><label><input type="checkbox" class="chk"> Are outcomes clearly stated and measurable; are indicators SMART and consistent with the logframe and narrative?</label></li>
-<li><label><input type="checkbox" class="chk"> Is there a suitable sustainability/continuity dimension (handover, local ownership) appropriate to context?</label></li>
-<li><label><input type="checkbox" class="chk"> Are activities feasible and proportionate to budget/timeframe given access and security constraints?</label></li>
-<li><label><input type="checkbox" class="chk"> If proposing systems (e.g., cash delivery), is relevance justified and are resources provided for actual implementation (not just setup)?</label></li>
-</ul>
-</section><section>
-<h2>F. Cash Assistance Standards (incl. Myanmar specifics)</h2>
-<ul>
-<li><label><input type="checkbox" class="chk"> Is MPCA/cash transfer value based on local market assessments and CWG standards (with predefined triggers/SOPs for timely adjustments to preserve purchasing power)?</label></li>
-<li><label><input type="checkbox" class="chk"> Is the cash modality appropriate given market/financial service constraints, liquidity, and regulatory environment (documented risk analysis and mitigation)?</label></li>
-<li><label><input type="checkbox" class="chk"> Have delivery platforms and interoperable registries been considered to enable coordinated referrals and data sharing?</label></li>
-<li><label><input type="checkbox" class="chk"> If using cash transfer agents (last‑resort), is there justification and internal controls to mitigate diversion/sanctions risks, reported by final report?</label></li>
-<li><label><input type="checkbox" class="chk"> If establishing cash systems, is there a budget for actual transfers; if not, is the system itself a justified priority?</label></li>
-</ul>
-</section><section>
-<h2>G. Protection & Sectoral Integration (incl. WASH)</h2>
-<ul>
-<li><label><input type="checkbox" class="chk"> Are protection activities inclusive and risk‑based (not only women/children unless justified by data), with comprehensive case management per standards?</label></li>
-<li><label><input type="checkbox" class="chk"> Are direct services vs referral‑based services clearly distinguished and mapped to functional pathways (with demonstrated referral mapping, not only intent)?</label></li>
-<li><label><input type="checkbox" class="chk"> If WASH is integrated within protection/health/nutrition/EiE, are causal links to specific protection and health outcomes explicit and measurable?</label></li>
-<li><label><input type="checkbox" class="chk"> Are WASH/Shelter activities compliant with MER and designed for safety, durability, and context appropriateness (incl. protracted settings and sudden onset response)?</label></li>
-</ul>
-</section><section>
-<h2>H. Risk Mitigation, Access & Partnerships</h2>
-<ul>
-<li><label><input type="checkbox" class="chk"> Are partnership modalities (community committees/local NGOs) described with accountability and inclusion safeguards?</label></li>
-<li><label><input type="checkbox" class="chk"> Is a localisation annex provided (capacity strengthening, mutual benefit, transparency, equity, security management, duty of care, overheads share)?</label></li>
-<li><label><input type="checkbox" class="chk"> Is remote management acknowledged where applicable, with DG ECHO remote management questionnaire annexed and monitoring modalities detailed?</label></li>
-<li><label><input type="checkbox" class="chk"> Are transparency procedures, inclusive selection processes, and monitoring mechanisms in place to prevent elite capture/exclusion?</label></li>
-<li><label><input type="checkbox" class="chk"> Is adaptive management planned to adjust mitigation based on evolving risks?</label></li>
-</ul>
-</section><section>
-<h2>I. Final Readiness & Submission Check</h2>
-<ul>
-<li><label><input type="checkbox" class="chk"> Does the proposal meet HIP, policy, and technical criteria and reflect a life‑saving mandate given budget constraints?</label></li>
-<li><label><input type="checkbox" class="chk"> Is the project feasible within timeframe and budget; are resources aligned with planned activities?</label></li>
-<li><label><input type="checkbox" class="chk"> Are cross‑cutting themes addressed (protection mainstreaming, gender, age, disability inclusion, accountability, environment/MER)?</label></li>
-<li><label><input type="checkbox" class="chk"> Is the proposal competitively positioned (clear needs, logic, and priorities) for a high‑volume selection environment?</label></li>
-<li><label><input type="checkbox" class="chk"> Are all justifications evidence‑based and dated; are sources cited where relevant?</label></li>
-</ul>
-</section>
-    <footer>© 2026 – ECHO Proposal QA Checklist – Myanmar HIP 2026. Generated for internal use.</footer>
+    <header>
+      <h1>ECHO Proposal Quality‑Assurance Checklist — Myanmar HIP 2026</h1>
+      <div class="actions">
+        <button id="resetBtn" title="Uncheck all items">Reset</button>
+        <button id="printBtn" class="secondary" title="Print this checklist">Print</button>
+      </div>
+      <div class="progress-wrap card">
+        <div class="progress-label">
+          <span>Completion</span>
+          <span id="progressText">0 / 0 (0%)</span>
+        </div>
+        <div class="progress"><div id="progressBar" class="bar"></div></div>
+      </div>
+    </header>
+
+    <main class="card" id="checklist">
+      <!-- A. Needs Assessment & Evidence Base -->
+      <h2>A. Needs Assessment & Evidence Base</h2>
+      <ul>
+        <li><input type="checkbox" /><label>Is the needs assessment comprehensive, contextualized, recent, and disaggregated (quantitative and qualitative)?</label></li>
+        <li><input type="checkbox" /><label>Is the analysis specific to the proposed geographic area and population groups (not generic), and does it directly justify the action?</label></li>
+        <li><input type="checkbox" /><label>Are vulnerabilities and target groups evidenced with sources and dates, and aligned to the most acute needs?</label></li>
+        <li><input type="checkbox" /><label>Is humanitarian advocacy grounded in coordinated, evidence‑based analysis?</label></li>
+        <li><input type="checkbox" /><label>Where feasible/safe, is there consultation or coordination with relevant authorities; if not, is a clear justification provided?</label></li>
+      </ul>
+
+      <!-- B. Response Analysis & Strategy -->
+      <h2>B. Response Analysis & Strategy</h2>
+      <ul>
+        <li><input type="checkbox" /><label>Is there a coherent, detailed implementation strategy (methodology, sequencing, delivery mechanisms, targeting, monitoring)?</label></li>
+        <li><input type="checkbox" /><label>Is the response logic fully aligned with the logical framework (results, outputs, indicators, assumptions)?</label></li>
+        <li><input type="checkbox" /><label>Are operational/protection/access/contextual risks clearly analyzed with concrete mitigation measures?</label></li>
+        <li><input type="checkbox" /><label>If working through community/camp management committees or local structures, are risks (e.g., exclusion, elite capture) and mitigations explicit?</label></li>
+        <li><input type="checkbox" /><label>Are conflict‑sensitivity and Do No Harm considerations integrated and tracked?</label></li>
+      </ul>
+
+      <!-- C. Alignment With ECHO Policies & Myanmar HIP 2026 -->
+      <h2>C. Alignment With ECHO Policies & Myanmar HIP 2026</h2>
+      <ul>
+        <li><input type="checkbox" /><label>Does the intervention focus on life‑saving multi‑sector assistance for IDPs, conflict‑affected and disaster‑affected populations (incl. hard‑to‑reach areas)?</label></li>
+        <li><input type="checkbox" /><label>Are sector choices aligned with Myanmar HIP 2026 priorities…</label></li>
+        <li><input type="checkbox" /><label>Is localisation a core feature (fair partnerships, capacity strengthening, risk sharing, adequate share of overheads to local partners)?</label></li>
+        <li><input type="checkbox" /><label>Is there coordination and clear complementarity with FLER/emergency mechanisms, and cluster/Area of Responsibility reporting?</label></li>
+        <li><input type="checkbox" /><label>Are Minimum Environmental Requirements (MER) applied across sectors, including WASH and Shelter &amp; Settlements designs?</label></li>
+        <li><input type="checkbox" /><label>Is the proposal free of standalone DP components in Myanmar… while mainstreaming preparedness where relevant?</label></li>
+        <li><input type="checkbox" /><label>Does the proposal operationalise the Nexus where appropriate without diluting the life‑saving focus?</label></li>
+      </ul>
+
+      <!-- D. Proposal Structure, Detail & Internal Coherence -->
+      <h2>D. Proposal Structure, Detail & Internal Coherence</h2>
+      <ul>
+        <li><input type="checkbox" /><label>Is the proposal well‑structured and complete (Single Form sections fully detailed, no vague descriptions)?</label></li>
+        <li><input type="checkbox" /><label>Are activities, logframe elements, and budget internally consistent across all sections?</label></li>
+        <li><input type="checkbox" /><label>Are indicators SMART, time‑bound, and aligned with DG ECHO KRIs where applicable?</label></li>
+        <li><input type="checkbox" /><label>Is the DG ECHO Protection Mainstreaming KOI applied across sectors, and a Protection outcome indicator included for protection actions?</label></li>
+        <li><input type="checkbox" /><label>Are abbreviations, methodologies, and technical concepts clearly explained?</label></li>
+      </ul>
+
+      <!-- E. Results Framework Quality -->
+      <h2>E. Results Framework Quality</h2>
+      <ul>
+        <li><input type="checkbox" /><label>Are intended results clearly defined, realistic, and derived from the needs assessment?</label></li>
+        <li><input type="checkbox" /><label>Is the methodological approach sufficiently detailed (steps, tools, sequencing, delivery mechanisms) for each result area?</label></li>
+        <li><input type="checkbox" /><label>Are activities described with enough operational detail to understand how they will be implemented?</label></li>
+        <li><input type="checkbox" /><label>Is there a clear articulation of causal pathways from activities to outputs and outcomes?</label></li>
+        <li><input type="checkbox" /><label>Do planned activities include tangible service delivery, not predominantly assessments/trainings/capacity building?</label></li>
+        <li><input type="checkbox" /><label>Is the balance between capacity‑building and direct assistance appropriate for a humanitarian action?</label></li>
+        <li><input type="checkbox" /><label>Do the result areas logically support each other and contribute to a coherent intervention strategy?</label></li>
+        <li><input type="checkbox" /><label>Are outcomes clearly stated and measurable; are indicators SMART and consistent with the logframe and narrative?</label></li>
+        <li><input type="checkbox" /><label>Is there a suitable sustainability/continuity dimension (handover, local ownership) appropriate to context?</label></li>
+        <li><input type="checkbox" /><label>Are activities feasible and proportionate to budget/timeframe given access and security constraints?</label></li>
+        <li><input type="checkbox" /><label>If proposing systems (e.g., cash delivery), is relevance justified and are resources provided for actual implementation (not just setup)?</label></li>
+      </ul>
+
+      <!-- F. Cash Assistance Standards -->
+      <h2>F. Cash Assistance Standards (incl. Myanmar specifics)</h2>
+      <ul>
+        <li><input type="checkbox" /><label>Is MPCA/cash transfer value based on local market assessments and CWG standards…?</label></li>
+        <li><input type="checkbox" /><label>Is the cash modality appropriate given market/financial service constraints…?</label></li>
+        <li><input type="checkbox" /><label>Have delivery platforms and interoperable registries been considered…?</label></li>
+        <li><input type="checkbox" /><label>If using cash transfer agents (last‑resort), is there justification and internal controls…?</label></li>
+        <li><input type="checkbox" /><label>If establishing cash systems, is there a budget for actual transfers…?</label></li>
+      </ul>
+
+      <!-- G. Protection & Sectoral Integration -->
+      <h2>G. Protection & Sectoral Integration (incl. WASH)</h2>
+      <ul>
+        <li><input type="checkbox" /><label>Are protection activities inclusive and risk‑based…?</label></li>
+        <li><input type="checkbox" /><label>Are direct services vs referral‑based services clearly distinguished…?</label></li>
+        <li><input type="checkbox" /><label>If WASH is integrated within protection/health/nutrition/EiE, are causal links…?</label></li>
+        <li><input type="checkbox" /><label>Are WASH/Shelter activities compliant with MER…?</label></li>
+      </ul>
+
+      <!-- H. Risk Mitigation, Access & Partnerships -->
+      <h2>H. Risk Mitigation, Access & Partnerships</h2>
+      <ul>
+        <li><input type="checkbox" /><label>Are partnership modalities (community committees/local NGOs) described with accountability and inclusion safeguards?</label></li>
+        <li><input type="checkbox" /><label>Is a localisation annex provided (capacity strengthening, mutual benefit, transparency, equity, security management, duty of care, overheads share)?</label></li>
+        <li><input type="checkbox" /><label>Is remote management acknowledged… with DG ECHO remote management questionnaire annexed and monitoring modalities detailed?</label></li>
+        <li><input type="checkbox" /><label>Are transparency procedures, inclusive selection processes, and monitoring mechanisms in place…?</label></li>
+        <li><input type="checkbox" /><label>Is adaptive management planned to adjust mitigation based on evolving risks?</label></li>
+      </ul>
+
+      <!-- I. Final Readiness & Submission Check -->
+      <h2>I. Final Readiness & Submission Check</h2>
+      <ul>
+        <li><input type="checkbox" /><label>Does the proposal meet HIP, policy, and technical criteria and reflect a life‑saving mandate…?</label></li>
+        <li><input type="checkbox" /><label>Is the project feasible within timeframe and budget; are resources aligned with planned activities?</label></li>
+        <li><input type="checkbox" /><label>Are cross‑cutting themes addressed (protection mainstreaming, gender, age, disability inclusion, accountability, environment/MER)?</label></li>
+        <li><input type="checkbox" /><label>Is the proposal competitively positioned for a high‑volume selection environment?</label></li>
+        <li><input type="checkbox" /><label>Are all justifications evidence‑based and dated; are sources cited where relevant?</label></li>
+      </ul>
+    </main>
+
+    <footer>© 2026 — ECHO Proposal QA Checklist — Myanmar HIP 2026. Generated for internal use.</footer>
   </div>
+
   <script>
-function updateProgress() {
-  const checks = document.querySelectorAll('.chk');
-  const total = checks.length;
-  const done = Array.from(checks).filter(c => c.checked).length;
-  const pct = total ? Math.round((done / total) * 100) : 0;
-  document.getElementById('progress-bar').style.width = pct + '%';
-  document.getElementById('progress-text').textContent = pct + '% complete';
-}
+    // Count & update progress whenever a checkbox changes
+    function updateProgress() {
+      const boxes = document.querySelectorAll('#checklist input[type="checkbox"]');
+      const checked = Array.from(boxes).filter(b => b.checked).length;
+      const total = boxes.length;
+      const pct = total ? Math.round((checked / total) * 100) : 0;
 
-document.addEventListener('DOMContentLoaded', () => {
-  const checks = document.querySelectorAll('.chk');
-  checks.forEach(c => c.addEventListener('change', updateProgress));
-  updateProgress();
-});
+      document.getElementById('progressBar').style.width = pct + '%';
+      document.getElementById('progressText').textContent = `${checked} / ${total} (${pct}%)`;
+    }
 
-function resetChecklist() {
-  document.querySelectorAll('.chk').forEach(c => c.checked = false);
-  updateProgress();
-}
+    // Persist state in localStorage (per browser)
+    function loadState() {
+      const saved = JSON.parse(localStorage.getItem('qaChecklist') || '{}');
+      document.querySelectorAll('#checklist input[type="checkbox"]').forEach((box, idx) => {
+        box.checked = !!saved[idx];
+      });
+    }
+    function saveState() {
+      const state = {};
+      document.querySelectorAll('#checklist input[type="checkbox"]').forEach((box, idx) => {
+        state[idx] = box.checked;
+      });
+      localStorage.setItem('qaChecklist', JSON.stringify(state));
+    }
 
-function printChecklist() {
-  window.print();
-}
-</script>
+    function wireUp() {
+      const boxes = document.querySelectorAll('#checklist input[type="checkbox"]');
+      boxes.forEach(box => box.addEventListener('change', () => { saveState(); updateProgress(); }));
+      document.getElementById('resetBtn').addEventListener('click', () => {
+        boxes.forEach(b => b.checked = false);
+        saveState();
+        updateProgress();
+      });
+      document.getElementById('printBtn').addEventListener('click', () => window.print());
+      updateProgress();
+    }
+
+    // Init
+    loadState();
+    wireUp();
+  </script>
 </body>
 </html>
+
+  <!-- Minimal styles -->
+  <style>
+    :root {
+      --bg: #0f172a;           /* slate-900 */
+      --card: #111827;        /* gray-900 */
+      --text: #e5e7eb;        /* gray-200 */
+      --muted: #9ca3af;       /* gray-400 */
+      --accent: #60a5fa;      /* blue-400 */
+      --accent-2: #22c55e;    /* green-500 */
+      --border: #1f2937;      /* gray-800 */
+    }
+    html, body {
+      margin: 0; padding: 0; background: var(--bg); color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    }
+    .container { max-width: 980px; margin: 2rem auto; padding: 0 1rem; }
+    header { margin-bottom: 1rem; }
